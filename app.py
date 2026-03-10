@@ -5,7 +5,7 @@ import numpy as np
 # Load the trained model
 model = pickle.load(open("model.pkl", "rb"))
 
-st.title("Wine Quality Prediction App")
+st.title("Wine Quality Prediction App 🍷")
 
 st.write("Enter the chemical properties of wine to predict its quality.")
 
@@ -23,7 +23,7 @@ sulphates = st.number_input("Sulphates")
 alcohol = st.number_input("Alcohol")
 
 # Prediction button
-if st.button("Predict Wine Quality"):
+if st.button("Predict Wine Quality 🚀"):
 
     features = np.array([[fixed_acidity,
                           volatile_acidity,
@@ -90,3 +90,4 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
