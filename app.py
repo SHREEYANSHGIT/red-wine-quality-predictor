@@ -39,7 +39,10 @@ if st.button("Predict Wine Quality 🚀"):
 
     prediction = model.predict(features)
 
-    st.success(f"Predicted Wine Quality: {prediction[0]}")
+    if prediction[0] == 1:
+        st.success("🍷 Good Quality Wine")
+    else:
+        st.error("⚠️ Bad Quality Wine")
 
     # ---------- FOOTER ----------
 
@@ -90,4 +93,5 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
